@@ -25,9 +25,10 @@ require __DIR__.'/auth.php';
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/me', function () {
+    echo "<pre>";
+    print_r(App\Models\User::all()->toArray());
+});
 
 //Route::get('/', function () {
 //    return view('dashboard');
